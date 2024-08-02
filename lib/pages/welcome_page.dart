@@ -1,4 +1,6 @@
 import 'package:final_1/pages/buttons.dart';
+import 'package:final_1/pages/help.dart';
+import 'package:final_1/pages/scanme.dart';
 import 'package:flutter/material.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -53,7 +55,6 @@ class WelcomePage extends StatelessWidget {
                               onPressed: () {
                                 Navigator.pushNamed(context, '/history');
                               }),
-                          Buttons(buttonText: "Quick Access", onPressed: () {}),
                           ElevatedButton(
                               style: const ButtonStyle(
                                   backgroundColor: WidgetStatePropertyAll(
@@ -66,7 +67,7 @@ class WelcomePage extends StatelessWidget {
                                   Text(
                                       style: TextStyle(
                                           fontSize: 16.0, color: Colors.white),
-                                      'Setings'),
+                                      'Settings'),
                                   Icon(
                                     Icons.settings,
                                     color: Colors.white,
@@ -77,9 +78,22 @@ class WelcomePage extends StatelessWidget {
                       ),
                       Column(
                         children: [
-                          Buttons(buttonText: "Scan Image", onPressed: () {}),
-                          Buttons(buttonText: "View", onPressed: () {}),
-                          Buttons(buttonText: "Help", onPressed: () {}),
+                          Buttons(
+                              buttonText: "Scan Image",
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Scanme()));
+                              }),
+                          Buttons(
+                              buttonText: "Help",
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Help()));
+                              }),
                         ],
                       ),
                     ],

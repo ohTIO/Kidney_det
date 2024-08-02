@@ -74,13 +74,30 @@ class LoginPage extends StatelessWidget {
                               backgroundColor:
                                   WidgetStatePropertyAll(Color(0xFF023ED8))),
                           // An action function
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/');
-                          },
+                          onPressed: () {},
                           child: const Text(
                               style: TextStyle(
                                   color: Colors.white, fontSize: 20.0),
                               "Login"),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        ElevatedButton(
+                          // Give the button some stye
+                          style: const ButtonStyle
+                              // Set the background color
+                              (
+                              backgroundColor:
+                                  WidgetStatePropertyAll(Color(0xFF023ED8))),
+                          // An action function
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/welcome');
+                          },
+                          child: const Text(
+                              style: TextStyle(
+                                  color: Colors.white, fontSize: 20.0),
+                              "skip"),
                         ),
                         // If a User does not have account and click on signup, it should redirect to signup page
                         Row(
@@ -89,7 +106,9 @@ class LoginPage extends StatelessWidget {
                             const Text("Don't have an account?"),
                             // Use a clickable text for the user to signup
                             TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/createAccount');
+                              },
                               // Style the button
                               style: const ButtonStyle(
                                   // Give the button text a black color

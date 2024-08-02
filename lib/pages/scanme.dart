@@ -13,6 +13,7 @@ class _ScanmeState extends State<Scanme> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      
       home: ScanSessionPage(),
       debugShowCheckedModeBanner: false,
     );
@@ -50,7 +51,7 @@ class ScanSessionPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 20), 
             ElevatedButton(
               onPressed: () {
                 // Action for 'Take Photo' button

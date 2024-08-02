@@ -10,12 +10,13 @@ import 'package:final_1/pages/help.dart';
 void main() {
   runApp(MaterialApp(
     routes: {
-      '/': (context) => WelcomePage(),
-      '/iii': (context) => Imageanalysis(),
+      '/': (context) => LoginPage(),
+      '/ImageAnalysis': (context) => Imageanalysis(),
       '/Scanme': (context) => Scanme(),
       '/history': (context) => history(),
-      '/help':(context)=>Help(),
-      '/createAccount':(context)=>CreateAccount(),
+      '/help': (context) => Help(),
+      '/createAccount': (context) => CreateAccount(),
+      '/welcome':(context)=>WelcomePage(),
     },
     debugShowCheckedModeBanner: false,
   ));
