@@ -54,7 +54,7 @@ class _historyState extends State<history> {
             ),
           ],
         ),
-      ),
+      )    
     );
   }
 }
